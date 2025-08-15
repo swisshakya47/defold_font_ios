@@ -1,0 +1,28 @@
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	msg.post("@render:", "use_fixed_fit_projection", { near = -1, far = 1 })
+	self.current_screen = 1;
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("proxy_loaded") then
+		msg.post(sender, "init")
+		msg.post(sender, "enable")
+	end
+end
+
+function on_input(self, action_id, action)
+	if action_id == hash("touch") and action.pressed then
+		print("Touch!")
+		if self.current_screen == 1 then
+			msg.post("#good", "load");
+			self.current_screen = 2;
+		else
+			self.current_screen = 1;
+			msg.post("#good", "disable")
+			msg.post("#good", "final")
+			msg.post("#good", "unload")
+		end
+
+	end
+end

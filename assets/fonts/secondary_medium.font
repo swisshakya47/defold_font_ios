@@ -1,0 +1,8 @@
+font: "/assets/fonts/changa/Changa-Medium.ttf"
+material: "/builtins/fonts/font.material"
+size: 50
+outline_alpha: 1.0
+outline_width: 8.0
+cache_width: 2048
+cache_height: 2048
+characters: " !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"

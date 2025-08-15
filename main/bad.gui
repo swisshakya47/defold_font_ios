@@ -1,0 +1,28 @@
+fonts {
+  name: "secondary_medium"
+  font: "/assets/fonts/secondary_medium.font"
+}
+fonts {
+  name: "secondary_outline"
+  font: "/assets/fonts/secondary_outline.font"
+}
+nodes {
+  position {
+    x: 358.0
+    y: 588.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "<text>"
+  font: "secondary_medium"
+  id: "text"
+  inherit_alpha: true
+}
+layers {
+  name: "layer"
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT
